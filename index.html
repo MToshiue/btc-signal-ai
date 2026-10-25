@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BTC Signal AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div>
+        <div class="eyebrow">OKX · PUBLIC MARKET DATA</div>
+        <h1>BTC Signal <span>AI</span></h1>
+        <p class="sub">Аналитика UP / DOWN для горизонтов 5 и 15 минут</p>
+      </div>
+      <div class="live"><i></i> Данные рынка</div>
+    </header>
+
+    <section class="price-panel">
+      <div>
+        <div class="label">BTC / USDT · последняя закрытая 1m-свеча</div>
+        <div class="price" id="price">—</div>
+        <div class="muted" id="updated">Загрузка данных OKX…</div>
+      </div>
+      <button id="refresh">Обновить</button>
+    </section>
+
+    <section class="signal-grid">
+      <article class="card" id="card-5">
+        <div class="card-head"><span>Горизонт 5 минут</span><span class="pill">BTC</span></div>
+        <div class="direction wait" id="direction-5">WAIT</div>
+        <div class="strength"><span>Сила модели</span><b id="strength-5">—</b></div>
+        <div class="meter"><div id="meter-5"></div></div>
+        <div class="score">Баллы модели: <b id="score-5">—</b></div>
+        <h3>Факторы сигнала</h3>
+        <ul id="reasons-5"><li>Ожидание данных…</li></ul>
+      </article>
+      <article class="card" id="card-15">
+        <div class="card-head"><span>Горизонт 15 минут</span><span class="pill">BTC</span></div>
+        <div class="direction wait" id="direction-15">WAIT</div>
+        <div class="strength"><span>Сила модели</span><b id="strength-15">—</b></div>
+        <div class="meter"><div id="meter-15"></div></div>
+        <div class="score">Баллы модели: <b id="score-15">—</b></div>
+        <h3>Факторы сигнала</h3>
+        <ul id="reasons-15"><li>Ожидание данных…</li></ul>
+      </article>
+    </section>
+
+    <section class="card metrics">
+      <div class="section-title">Индикаторы · 1 минута</div>
+      <div class="metric-grid">
+        <div><span>RSI (14)</span><b id="rsi">—</b></div>
+        <div><span>EMA 9</span><b id="ema9">—</b></div>
+        <div><span>EMA 21</span><b id="ema21">—</b></div>
+        <div><span>MACD</span><b id="macd">—</b></div>
+        <div><span>Импульс за 3m</span><b id="momentum">—</b></div>
+        <div><span>ATR (14)</span><b id="atr">—</b></div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>Важно</strong>
+      <p>Это исследовательский прототип, а не финансовая рекомендация. UP/DOWN и «сила модели» не гарантируют результат; проценты силы не являются откалиброванной вероятностью выигрыша. Перед использованием проверь стратегию на исторических данных и в режиме наблюдения. Сайт не открывает сделки и не запрашивает API-ключи.</p>
+    </section>
+    <footer id="status">Автообновление каждые 15 секунд · публичные данные OKX</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
